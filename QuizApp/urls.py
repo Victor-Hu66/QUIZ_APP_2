@@ -5,5 +5,5 @@ urlpatterns = [
     path("", CategoryList.as_view(), name="category" ),
     path("<category>", CategoryDetail.as_view(), name="category-detail" ),
     # path("<category>/<title>", QuizDetail.as_view(), name="question" ),
-    path("question/<title>", QuizDetail.as_view(), name="question" ),
+    path("<category>/<title>", QuizDetail.as_view(), name="question" ),
 ]
