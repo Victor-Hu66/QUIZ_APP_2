@@ -49,7 +49,6 @@ class Question(Update):
     def __str__(self):
         return self.title
 
-
 class Answer(Update):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="answer")
     answer_text = models.CharField(max_length=250)

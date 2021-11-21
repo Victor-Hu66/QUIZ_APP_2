@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'nested_admin',
     'users',
     'rest_framework.authtoken',
+    'drf_yasg',
     'dj_rest_auth',
     'corsheaders',
 ]
@@ -140,7 +141,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'  # <-- Here
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
